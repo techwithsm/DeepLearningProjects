@@ -1,0 +1,11 @@
+# Runtime + dev dependencies; equivalent to `pip install -e ".[dev]"` (see pyproject.toml)
+tensorflow>=2.18
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+pytest
+ipykernel
+nbconvert

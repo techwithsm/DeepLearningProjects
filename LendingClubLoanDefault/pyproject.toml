@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loan-default"
+version = "1.0.0"
+description = "Lending Club loan default prediction with Keras / TensorFlow"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "tensorflow>=2.18",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "joblib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ipykernel", "nbconvert"]
+
+[project.scripts]
+loan-default = "loan_default.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
